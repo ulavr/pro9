@@ -1,0 +1,92 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background: hsl(233, 47%, 7%);
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    min-height: 100vh;
+}
+.container{
+ max-width:1020px ;
+ margin: 0 auto;
+}
+.wrapper{
+    background-color:hsl(244, 38%, 16%) ;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 2rem;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.img-component img{
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+}
+.img-component{
+position: relative;
+}
+.img-component::after {
+position: absolute;
+content: '';
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+background-color: rgba(145, 11, 228, 0.6);
+}
+.text-component{
+ padding: 13% ;
+}
+.text-component h1.title{
+color: aliceblue;
+font-weight: 700;
+padding-bottom: 22px;
+}
+.title span{
+ color: rgb(118, 16, 213);
+}
+.text-component p.subtitle{
+color: rgb(141, 141, 141); ;
+line-height: 1.8;
+}
+.stat-box p.num{
+color: aliceblue;
+font-size: 25px;
+font-weight: 700;
+margin-bottom: 7px;
+}
+.stat-box p{
+ color:  rgb(141, 141, 141);
+}
+.stat-box{
+    display: flex;
+    justify-content:space-between ;
+    text-transform: uppercase; 
+    padding-top: 60px;
+}
+@media only screen and (max-width:426px) {
+body{
+ text-align: center;
+}
+.wrapper{
+grid-template-columns: 1fr;
+}
+.img-component{
+    order: -1;
+}
+.text-component{
+    padding: 12% 8%;
+}
+.title{
+    font-size: 23px;
+    line-height: 1.4;
+}
+.stat-box{
+flex-direction: column;
+padding-top: 30px;
+}
+.stat-box div {
+margin-top: 25px;
+}
+}
